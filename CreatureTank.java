@@ -2,7 +2,7 @@
  * April 17, 2016
  * CreatureTank.java
  * 
- * This program will create a "creature tank", which consists of 26 "creatures".
+ * This program will create a "creature tank", which consists of "creatures".
  * The creatures roam freely in the tank, but when close to each other,
  * they will double in size and turn from red and white to yellow and white.
  * 
@@ -45,6 +45,18 @@ public class CreatureTank extends Pad {
     
     // Executes program
     public static void main(String[] args) {
-        new CreatureTank(1000, 600, 26);
+        // The creature tank can customized via command line argument.
+        // The first argument represents the width of the window.
+        // The second argument represents the height of the window.
+        // The third argument represents the number of creatures.
+        if (args.length == 3) {
+            int width = Integer.parseInt(args[0]);
+            int height = Integer.parseInt(args[1]);
+            int numCreatures = Integer.parseInt(args[2]);
+            new CreatureTank(width, height, numCreatures);
+        } else { 
+            // Defaults to 26 creatures in a 1000x600 window
+            new CreatureTank(1000, 600, 26);
+        }
     }
 }

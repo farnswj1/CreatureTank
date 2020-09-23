@@ -1,6 +1,5 @@
 /* Justin Farnsworth
  * April 17, 2016
- * Project 03
  * CreatureTank.java
  * 
  * This program will create a "creature tank", which consists of 26 "creatures".
@@ -16,10 +15,11 @@ import doodlepad.*;
 import java.util.ArrayList;
 import java.util.Timer;
 
-public class CreatureTank extends Pad
-{
+public class CreatureTank extends Pad {
+    // Array holds the creatures
     private ArrayList<Creature> creatures;
     
+    // Constructor
     public CreatureTank(int width, int height, int numCreatures) {
         super(width, height);
         setBackground(0, 0, 150);

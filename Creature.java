@@ -1,6 +1,5 @@
 /* Justin Farnsworth
  * April 17, 2016
- * Project 03
  * Creature.java
  * 
  * This program will create a "creature tank", which consists of 26 "creatures".
